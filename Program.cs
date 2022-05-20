@@ -9,11 +9,11 @@ namespace vn_mode_csharp_dz12
             float rub = 1000;
             float usd = 200;
             float eur = 100;
-            int rubToUsd = 74;
-            int usdToRub = 71;
-            int rubToEur = 81;
-            int eurToRub = 78;
-            float usdToEur = 1.06f;
+            float rubToUsd = 0.0135f;
+            float usdToRub = 71;
+            float rubToEur = 0.0123f;
+            float eurToRub = 78;
+            float usdToEur = 0.91f;
             float eurToUsd = 1.14f;
             float currencyCount;
             string userInput;
@@ -41,43 +41,18 @@ namespace vn_mode_csharp_dz12
                         userInput = Console.ReadLine();
                         if (rub >= Convert.ToSingle(userInput))
                         {
-                            currencyCount = Convert.ToSingle(userInput) / rubToUsd;
+                            currencyCount = Convert.ToSingle(userInput) * rubToUsd;
                             rub -= Convert.ToSingle(userInput);
                             usd += currencyCount;
 
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Успешно!");
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
-
-
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ошибка!");
                             Console.WriteLine("У вас недостаточно рублей для обмена.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
                         }
                         break;
                     case "2":
@@ -91,37 +66,13 @@ namespace vn_mode_csharp_dz12
 
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Успешно!");
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
-
-
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ошибка!");
                             Console.WriteLine("У вас недостаточно долларов для обмена.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
+
                         }
                         break;
                     case "3":
@@ -129,43 +80,18 @@ namespace vn_mode_csharp_dz12
                         userInput = Console.ReadLine();
                         if (rub >= Convert.ToSingle(userInput))
                         {
-                            currencyCount = Convert.ToSingle(userInput) / rubToEur;
+                            currencyCount = Convert.ToSingle(userInput) * rubToEur;
                             rub -= Convert.ToSingle(userInput);
                             eur += currencyCount;
 
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Успешно!");
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
-
-
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ошибка!");
                             Console.WriteLine("У вас недостаточно рублей для обмена.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
                         }
                         break;
                     case "4":
@@ -179,37 +105,12 @@ namespace vn_mode_csharp_dz12
 
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Успешно!");
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
-
-
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ошибка!");
                             Console.WriteLine("У вас недостаточно евро для обмена.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
                         }
                         break;
                     case "5":
@@ -217,43 +118,18 @@ namespace vn_mode_csharp_dz12
                         userInput = Console.ReadLine();
                         if (usd >= Convert.ToSingle(userInput))
                         {
-                            currencyCount = Convert.ToSingle(userInput) / usdToEur;
+                            currencyCount = Convert.ToSingle(userInput) * usdToEur;
                             usd -= Convert.ToSingle(userInput);
                             eur += currencyCount;
 
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Успешно!");
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
-
-
                         }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ошибка!");
                             Console.WriteLine("У вас недостаточно долларов для обмена.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
                         }
                         break;
                     case "6":
@@ -267,18 +143,6 @@ namespace vn_mode_csharp_dz12
 
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Успешно!");
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
-
 
                         }
                         else
@@ -286,18 +150,7 @@ namespace vn_mode_csharp_dz12
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ошибка!");
                             Console.WriteLine("У вас недостаточно евро для обмена.");
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("Ваш баланс:");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
-                            Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
-                            Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
-                            Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
-                            Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
-                            Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
-                            Console.WriteLine("Если вы хотите выйти введите 0: ");
-                            userInput = Console.ReadLine();
+
                         }
                         break;
                     case "0":
@@ -310,6 +163,19 @@ namespace vn_mode_csharp_dz12
                         break;
 
                 }
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Ваш баланс:");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine($"RUB = {rub}\nUSD = {usd}\nEUR = {eur}");
+                Console.WriteLine("Если вы хотите обменять рубли на доллары введите 1: ");
+                Console.WriteLine("Если вы хотите обменять доллары на рубли введите 2: ");
+                Console.WriteLine("Если вы хотите обменять рубли на евро введите 3: ");
+                Console.WriteLine("Если вы хотите обменять евро на рубли введите 4: ");
+                Console.WriteLine("Если вы хотите обменять доллары на евро введите 5: ");
+                Console.WriteLine("Если вы хотите обменять евро на доллары введите 6: ");
+                Console.WriteLine("Если вы хотите выйти введите 0: ");
+                userInput = Console.ReadLine();
             }
 
             Console.WriteLine("Вы вышли из нашего конвертера. До свидания.");
